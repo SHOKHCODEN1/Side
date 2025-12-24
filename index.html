@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="stayl.css">
+</head>
+<body>
+<div class="asosiy" id="asosiy">
+
+    <div class="div_registration" id="loginBox">
+        <form onsubmit="login(event)">
+            <label class="label">Name:</label><br>
+            <input class="inp" id="loginName" type="text" required><br>
+
+            <label class="label">Surname:</label><br>
+            <input class="inp" id="loginSurname" type="text" required><br>
+
+            <label class="label">Password:</label><br>
+            <input class="inp" id="loginPassword" type="password" required><br>
+
+            <button class="btn">Sign in</button>
+
+            <div class="top">
+                If you don't have an account,
+                <a href="#" onclick="showRegister()">Create New</a>
+            </div>
+        </form>
+    </div>
+
+    <div class="div_registration hidden" id="registerBox">
+        <form onsubmit="register(event)">
+            <label class="label">Name:</label><br>
+            <input class="inp" id="regName" type="text" required><br>
+
+            <label class="label">Surname:</label><br>
+            <input class="inp" id="regSurname" type="text" required><br>
+
+            <label class="label">Password:</label><br>
+            <input class="inp" id="regPassword" type="password" required><br>
+
+            <button class="btn">Register</button>
+
+            <div class="top">
+                <a href="#" onclick="showLogin()">Back to login</a>
+            </div>
+        </form>
+    </div>
+
+    <div class="div_registration hidden" id="mainBox">
+        <h3>Welcome 🎉</h3>
+        <p id="userInfo"></p>
+        <div>Siz bu saytda juda qiziq narsalarni bilib yoki sinab kurasiz boshlash uchun tugmani bosing!</div>
+        <button class="btn" onclick="start()">Start</button>
+    </div>
+   
+</div>
+ <div class="asosiy_menyu hidden" id="asosiy_menyu">
+    <button class="btn_asosiy_menyu" onclick="openDavlatlar()"><div>Davlatlar</div></button>
+    <button class="btn_asosiy_menyu" onclick="Futbolchi_f()"><div>Futbolchilar</div></button>
+    <button class="btn_asosiy_menyu"><div>Kinolar</div></button>
+    <button class="btn_asosiy_menyu"><div>Uyinlar</div></button>
+    <button class="btn_asosiy_menyu"><div>Jadidlar</div></button>
+    </div>
+<div class="box hidden" id="davlatlarBox">
+    <input class="inp" id="search" placeholder="Davlat qidirish..." oninput="filterDavlat()">
+
+    <ul id="list"></ul>
+
+    <div id="info"></div>
+
+    <button class="btn_asosiy_menyu" onclick="backMenu()">Ortga</button>
+</div>
+<img class="img_hidden hidden" id="img_hidden"  src="monkey_legend.jpg" alt="">
+
+<script src="main.js"></script>
+</body>
+</html>
